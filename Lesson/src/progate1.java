@@ -62,8 +62,14 @@ public class progate1 {
 //		System.out.println(names[0]);
 //		names[0] = "優輔";
 //		System.out.println(names[0]);
-		for (int i = 0; i < names.length; i++) {
-		   System.out.println("私の名前は"+names[i]+"です");
+		
+//		length機能
+//		for (int i = 0; i < names.length; i++) {
+//		   System.out.println("私の名前は"+names[i]+"です");
+//		 }
+//		拡張for文
+		for (String name: names) {
+		   System.out.println("私の名前は"+name+"です");
 		 }
 	}
 }

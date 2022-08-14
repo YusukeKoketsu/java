@@ -58,7 +58,7 @@ public class progate1 {
 //		}
 		
 //		配列 上書き
-		String[] names = {"纐纈", "鈴木", "山田"};
+//		String[] names = {"纐纈", "鈴木", "山田"};
 //		System.out.println(names[0]);
 //		names[0] = "優輔";
 //		System.out.println(names[0]);
@@ -68,8 +68,21 @@ public class progate1 {
 //		   System.out.println("私の名前は"+names[i]+"です");
 //		 }
 //		拡張for文
-		for (String name: names) {
-		   System.out.println("私の名前は"+name+"です");
-		 }
+//		for (String name: names) {
+//		   System.out.println("私の名前は"+name+"です");
+//		 }
+//		int[] numbers = {1, 4, 6, 9, 13, 16};
+//		int oddSum = 0;
+//		int evenSum = 0;
+//		
+//		for (int number : numbers) {
+//			if (number % 2 == 0) {
+//				evenSum += number;				
+//			}else {
+//				oddSum += number;
+//			}
+//		}
+//		System.out.println("奇数の和は" + oddSum + "です");
+//	    System.out.println("偶数の和は" + evenSum + "です");
 	}
 }

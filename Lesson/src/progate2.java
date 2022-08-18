@@ -1,4 +1,4 @@
-public class progate2 {
+public class Progate2 {
 	public static void main(String[] args) {
 //	メゾッドの呼び出し
 //	  printData();
@@ -10,6 +10,9 @@ public class progate2 {
 //	  printData(name, 23);
 //	  printData(fullName("John", "Christopher", "Smith"), 65);
 	  printData(fullName("koketsu", "yusuke"), 23, 1.75, 80.0);
+	  
+//	  クラス名.メソッド名()とすることで、他のクラスのメソッドを呼び出すことができる
+	  Person.hello();
 	}
 //	メゾッドの定義
 //	public static void printData() {
@@ -25,6 +28,13 @@ public class progate2 {
 	  System.out.println("体重は" + weight + "kgです");
 	  double bmi = bmi(height, weight);
 	  System.out.println("BMIは" + bmi + "です");
+	  
+//	  条件分岐
+	  if (isHealthy(bmi)) {
+		  System.out.println("健康です");
+	  } else {
+		  System.out.println("健康ではありません");
+	  }
 	}
 	
 //	public static 戻り値のデータ型 メゾッド名(引数) {
@@ -40,4 +50,7 @@ public class progate2 {
 	public static double bmi(double height, double weight) {
 	    return weight / height / height;
 	  }
+	public static boolean isHealthy(double bmi) {
+		return bmi >= 18.5 && bmi < 25.0;
+	}
 }

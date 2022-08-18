@@ -1,5 +1,5 @@
 
-public class progate1 {
+public class Progate1 {
 	public static void main(String[] ages) {
 //		キャストは,強制的に型変換 (変換したいデータ型)値
 //		int num1 = 7;

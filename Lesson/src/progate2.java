@@ -1,4 +1,4 @@
-public class Progate2 {
+public class progate2 {
 	public static void main(String[] args) {
 //	メゾッドの呼び出し
 //	  printData();
@@ -10,9 +10,6 @@ public class Progate2 {
 //	  printData(name, 23);
 //	  printData(fullName("John", "Christopher", "Smith"), 65);
 	  printData(fullName("koketsu", "yusuke"), 23, 1.75, 80.0);
-	  
-//	  クラス名.メソッド名()とすることで、他のクラスのメソッドを呼び出すことができる
-	  Person.hello();
 	}
 //	メゾッドの定義
 //	public static void printData() {

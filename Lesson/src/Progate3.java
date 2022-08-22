@@ -13,6 +13,8 @@ public class Progate3 {
 	    
 	    int maxAge = 0;
 	    
+	    int totalAge = 0;
+	    
 	    for (int i = 0; i < count; i++) {
 	    
 	    System.out.println(i + 1 + "人目");
@@ -30,6 +32,8 @@ public class Progate3 {
 	        maxAge = age;
 	      }
 	    
+	    totalAge += age;
+	    
 	    System.out.println("身長(m)：");
 	    double height = scanner.nextDouble();
 	    
@@ -39,5 +43,7 @@ public class Progate3 {
 	    Person.printData(firstName, lastName, age, height, weight);
 	}
 	    System.out.println("最高年齢は" + maxAge + "歳です");
+	    
+	    System.out.println("平均年齢は" + totalAge / count + "歳です");
   }
 }

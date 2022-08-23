@@ -11,6 +11,7 @@ public class Person2 {
     private int age;
     private double height;
     private double weight;
+    private String job;
 	
 //	ゲッター  フィールドをprivateにした上で、クラス外から安全にフィールドの値を取得する
 //	ゲッターは「getフィールド名」のように命名する
@@ -18,13 +19,24 @@ public class Person2 {
 		return this.middleName = middleName;
 	}
 	
+	public String getJob() {
+		return this.job;
+	}
 	
+//	セッター  セッター  フィールドの値を変更するメソッド セッターは「setフィールド名」のように命名するのが一般的
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+	}
+	
+	public void setJob(String job) {
+		this.job = job;
+	}
 	
 //	コンストラクタ newを使ってインスタンスを生成した後に自動で呼び出される特別なメソッド
 //	①コンストラクタ名はクラス名と同じにする
 //	②戻り値を書いてはいけない（voidも書かない）
-	Person2(String firstName, String lastName, int age, double height, double weight) {
-		System.out.println("インスタンスが生成されました");
+	Person2(String firstName, String lastName, int age, double height, double weight, String job) {
+//		System.out.println("インスタンスが生成されました");
 //		クラスフィールドには「クラス名.クラスフィールド名」でアクセスすることができる
 		Person2.count ++;
 		
@@ -37,10 +49,10 @@ public class Person2 {
 	}
 	
 	
-	Person2(String firstName, String middleName, String lastName, int age, double height, double weight) {
+	Person2(String firstName, String middleName, String lastName, int age, double height, double weight, String job) {
 	    // this()とすると、コンストラクタから他のコンストラクタを呼び出すことができる
 //		thisはコンストラクタの先頭でしか呼び出せない
-	    this(firstName, lastName, age, height, weight);
+	    this(firstName, lastName, age, height, weight, job);
 	    
 	    this.middleName = middleName;
 	  }
@@ -71,6 +83,7 @@ public class Person2 {
 		System.out.println("私の名前は" + this.fullName() + "です");
 	    System.out.println("年齢は" + this.age + "歳です");
 	    System.out.println("BMIは" + Math.round(this.bmi()) + "です");
+	    System.out.println("仕事は" + this.job + "です");
 	}
 	
 //	クラスメソッドの定義は、「public static 戻り値の型 メソッド名()」とします

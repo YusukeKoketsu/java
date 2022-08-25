@@ -17,5 +17,9 @@ public class Main01 {
 	    System.out.print("走る距離を入力してください : ");
 	    int carDistance = scanner.nextInt();
 	    car.run(carDistance);
+	    System.out.println("-----------------");
+	    System.out.print("給油する量を入力してください");
+	    int liter = scanner.nextInt();
+	    car.charge(liter);
 	}
 }

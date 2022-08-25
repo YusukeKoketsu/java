@@ -5,10 +5,12 @@ public class Car {
 //	ガソリン量を100Lで満タンに設定
 	private int fuel = 100;
 	
+	
 	Car(String name, String color) {
 		this.name = name;
 		this.color = color;
 	}
+	
 	
 	public void printData() {
 		System.out.println("【車の情報】");
@@ -17,6 +19,7 @@ public class Car {
 	    System.out.println("走行距離 : " + this.distance + "km");
 	    System.out.println("ガソリン量 : " + this.fuel + "L");
 	}
+	
 	
 	public void run(int distance) {
 		System.out.println(distance + "km走ります");
@@ -29,5 +32,20 @@ public class Car {
 		}
 		System.out.println("走行距離：" + this.distance + "km");            
 	    System.out.println("ガソリン量：" + this.fuel + "L");
+	}
+	
+	
+	public void charge(int liter) {
+		System.out.println(liter + "L給油します");
+		
+		if (liter <= 0) {
+			System.out.println("給油出来ません");
+		} else if (liter + fuel >= 100) {
+			System.out.println("満タンまで給油します");
+			this.fuel = 100;
+		} else {
+			this.fuel += liter;
+		}
+		System.out.println("ガソリン量 : " + this.fuel + "L");
 	}
 }

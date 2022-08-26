@@ -35,16 +35,16 @@ public class Car {
 	}
 	
 	
-	public void charge(int liter) {
-		System.out.println(liter + "L給油します");
+	public void charge(int litre) {
+		System.out.println(litre + "L給油します");
 		
-		if (liter <= 0) {
+		if (litre <= 0) {
 			System.out.println("給油出来ません");
-		} else if (liter + fuel >= 100) {
+		} else if (litre + fuel >= 100) {
 			System.out.println("満タンまで給油します");
 			this.fuel = 100;
 		} else {
-			this.fuel += liter;
+			this.fuel += litre;
 		}
 		System.out.println("ガソリン量 : " + this.fuel + "L");
 	}

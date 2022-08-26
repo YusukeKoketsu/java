@@ -3,6 +3,11 @@
 public class Car02 extends Vehicle02 {
   private int fuel = 50;
   
+//  スーパークラスのコンストラクタを呼び出すには、super()
+  Car02(String name, String color) {
+	  super(name, color);
+  }
+  
   public int getFuel( ) {
 	  return this.fuel;
   }
@@ -31,5 +36,17 @@ public class Car02 extends Vehicle02 {
 		  this.fuel += litre;
 	  }
 	  System.out.println("ガソリン量 : " + this.fuel + "L");
+  }
+  
+  public void run(int distance) {
+	  System.out.println(distance + "km走ります");
+	  if (distance <= this.fuel) {
+		  this.distance += distance;
+		  this.fuel -= distance;
+	  }else {
+		  System.out.println("ガソリンが足りません");
+	  }
+	  System.out.println("走行距離：" + this.distance + "km");
+	  System.out.println("ガソリン量：" + this.fuel + "L");
   }
 }

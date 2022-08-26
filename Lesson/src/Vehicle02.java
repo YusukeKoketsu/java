@@ -1,9 +1,18 @@
 //既存のクラスのフィールドやメソッドを別のクラスに引き継ぐ機能を継承という
 //継承されるクラスを「スーパークラス」
-public class Vehicle02 {
+//抽象メソッドを1つでも持つクラスは、「抽象クラス」と呼ばれ、クラス名の前にabstractをつける必要がある
+abstract public class Vehicle02 {
 	private String name;
 	private String color;
-	private int distance = 0;
+//	private int distance = 0;
+	
+//	protectedを用いると、クラス内とサブクラスからのみアクセスを許すフィールドを作ることができる
+	protected int distance = 0;
+	
+	Vehicle02(String name, String color) {
+		this.name = name;
+		this.color = color;
+	}
 
 	public String getName() {
 	  return this.name;
@@ -30,4 +39,8 @@ public class Vehicle02 {
 	  System.out.println("色：" + this.color);
 	  System.out.println("走行距離：" + this.distance + "km");
 	}
+	
+//	abstractとは「抽象的な」という意味
+//	具体的な処理が決まっていない未完成のメソッドであるため、「抽象メソッド」と呼ばれる
+	public abstract void run(int distance);
 }

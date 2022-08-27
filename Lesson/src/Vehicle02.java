@@ -9,6 +9,10 @@ abstract public class Vehicle02 {
 //	protectedを用いると、クラス内とサブクラスからのみアクセスを許すフィールドを作ることができる
 	protected int distance = 0;
 	
+//	Person2クラスと組み合わせ Person型のownerフィールドを追加
+//	組み合わせの場合、ゲッターの戻り値の型と、セッターの仮引数の型がクラス型になることに注意
+	private Person3 owner;
+	
 	Vehicle02(String name, String color) {
 		this.name = name;
 		this.color = color;
@@ -26,12 +30,22 @@ abstract public class Vehicle02 {
 	  return this.distance;
 	}
 	
+//	personクラス
+	public Person3 getOwner() {
+		return this.owner;
+	}
+	
 	public void setName(String name) {
 	  this.name = name;
 	}
 	
 	public void setColor(String color) {
 	  this.color = color;
+	}
+	
+//	Personクラス
+	public void setOwner(Person3 person) {
+		this.owner = person;
 	}
 	
 	public void printData() {

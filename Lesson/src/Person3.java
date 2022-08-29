@@ -38,5 +38,19 @@ public class Person3 {
   public double bmi() {
     return this.weight / this.height / this.height;
   }
+  
+//  public void buy(Car02 car) {
+//	  car.setOwner(this);
+//  }
+  
+//  public void buy(Bicycle02 bicycle) {
+//	  bicycle.setOwner(this);
+//  }
+  
+  
+//  多態性 サブクラスのインスタンスを、スーパークラスのクラス型変数に代入することが可能
+  public void buy(Vehicle02 vehicle) {
+	  vehicle.setOwner(this);
+  }
 }
 

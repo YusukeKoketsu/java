@@ -9,7 +9,8 @@ public class Main02 {
 		Scanner scanner = new Scanner(System.in);
 	    Car02 car = new Car02("フェラーリ", "赤");
 //	    carの所有者をperson1に設定
-	    car.setOwner(person1);
+//	    car.setOwner(person1);
+	    person1.buy(car);
 	    
 //	    car.setName("フェラーリ");
 //	    car.setColor("赤");
@@ -18,7 +19,8 @@ public class Main02 {
 //	    bicycle.setColor("緑");
 	    
 //	    bicycleの所有者をperson2に設定
-	    bicycle.setOwner(person2);
+//	    bicycle.setOwner(person2);
+	    person2.buy(bicycle);
 
 	    System.out.println("【車の情報】");
 	    car.printData();
